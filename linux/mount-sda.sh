@@ -1,0 +1,3 @@
+#!/bin/bash
+
+mount -o noatime,compress=zstd,ssd,discard=async,space_cache=v2,subvol=@ /dev/sda1 /mnt; mount -o noatime,compress=zstd,ssd,discard=async,space_cache=v2,subvol=@var /dev/sda1 /mnt/var/; mount -o noatime,compress=zstd,ssd,discard=async,space_cache=v2,subvol=@opt /dev/sda1 /mnt/opt/; mount -o noatime,compress=zstd,ssd,discard=async,space_cache=v2,subvol=@root /dev/sda1 /mnt/root/; mount -o noatime,compress=zstd,ssd,discard=async,space_cache=v2,subvol=@home /dev/sda1 /mnt/home/; mount -o noatime,compress=zstd,ssd,discard=async,space_cache=v2,subvol=@srv /dev/sda1 /mnt/srv/; mount -o noatime,compress=zstd,ssd,discard=async,space_cache=v2,subvol=@usr@local /dev/sda1 /mnt/usr/local/; mount -o subvol=@swap /dev/sda1 /mnt/swap; swapon /mnt/swap/swapfile
